@@ -1,10 +1,13 @@
 package org.example.modell;
 
+import java.util.UUID;
+
 public class Szobrok extends Mukincs implements Comparable<Szobrok>{
     private String anyag;
     private int sz;
 
-    public Szobrok(String anyag, int sz) {
+    public Szobrok(String alkoto, String cim, Kategoria kategoria, String anyag, int sz) {
+        super(alkoto, cim, kategoria);
         this.anyag = anyag;
         this.sz = sz;
     }
@@ -37,7 +40,7 @@ public class Szobrok extends Mukincs implements Comparable<Szobrok>{
     }
 
     @Override
-    public int compareTo(Szobrok más) {
+    public int compareTo(Szobrok másik) {
         return 0;
     }
 }
